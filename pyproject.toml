@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sipl-toolkit"
+version = "0.1.0"
+description = "SIPL Language Toolkit: парсер, візуалізація дерева виводу, семантичні терми та асистент доведення коректності для мови SIPL"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+proof = ["z3-solver>=4.12"]
+dev = ["pytest>=7", "z3-solver>=4.12"]
+
+[project.scripts]
+sipl = "sipl.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

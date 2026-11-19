@@ -1,0 +1,8 @@
+begin
+  c := 0;
+  while n > 0 do
+  begin
+    n := n div 2;
+    c := c + 1
+  end
+end

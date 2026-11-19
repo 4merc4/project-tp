@@ -1,0 +1,8 @@
+begin
+  K := 0;
+  while ¬(X > Y) do
+  begin
+    Y := Y div X;
+    K := K + 1
+  end
+end

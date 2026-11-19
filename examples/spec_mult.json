@@ -1,0 +1,6 @@
+{
+  "pre": "y >= 0",
+  "post": "p = x * y",
+  "invariants": ["p + x * k = x * y and k >= 0"],
+  "variants": ["k"]
+}
